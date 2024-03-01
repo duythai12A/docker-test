@@ -1,0 +1,25 @@
+#version: '3.8'
+#
+#services:
+##  test-db:
+##    image: mysql
+##    container_name: test-db
+##    expose:
+##      - "3306"
+##    environment:
+##      # Các thông số này thay đổi theo password mysql trên máy bạn nhé.
+##      MYSQL_ROOT_PASSWORD: duythai12A@.
+##      MYSQL_DATABASE: vnpt
+##      MYSQL_USER: root2
+##      MYSQL_PASSWORD: phanduythai12A@.
+#
+thai-app:
+  build:
+    context: .
+    dockerfile: Dockerfile
+  expose:
+    - "8080"
+networks:
+  network1:
+    name: network-1
+    external: true
